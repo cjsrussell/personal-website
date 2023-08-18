@@ -1,0 +1,54 @@
+---
+title: "Connair J. S. Russell"
+comments: false
+image: profile.jpg
+page-layout: full
+about:
+  id: aboutme
+  template: trestles
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/cjsrussell
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/ConnairRussell     
+---
+
+:::{#aboutme}
+
+## About Me
+
+I am currently a postdoc working as a Research Fellow at Queen's University Belfast, on the core [Explaining Atheism](https://www.explainingatheism.org/research/core-research) project.
+
+I am interested in the Cognitive Science of Religion, or more specifically, the Cognitive Science of *Non*-Religion. The Explaining Atheism project is investigating the major psychological and social factors influencing non-belief (e.g. Cognitive Biases, Religious Socialisation). We are examining this across cultures, and in particular, we look to use modern causal inference techniques to look at the causal pathways to non-belief.
+
+Prior to joining the EA team i completed my PhD in 2022. Based at the [Max Planck Institute for Human Development](https://www.mpib-berlin.mpg.de/en) in Berlin, my PhD looked at cognitive biases in how we learn and generalise different kinds of information.
+
+
+:::: {.columns}
+
+::: {.column width="40%"}
+### Interests
+
+* Cognitive Science of Religion
+
+:::
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="50%"}
+### Education
+
+ {{< fa graduation-cap >}} PhD in Psychology, 2022 
+: <span style="font-size: 75%;">*Max Planck Institute for Human Development, & Freie Universität Berlin*</span> 
+
+:::
+
+::::
+
+:::
+
+This is some random text
