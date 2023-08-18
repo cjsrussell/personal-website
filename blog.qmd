@@ -1,5 +1,5 @@
 ---
-title: "personal-website"
+title: "Connair's Blog"
 listing:
   contents: posts
   sort: "date desc"
