@@ -12,12 +12,20 @@ about:
       href: https://github.com/cjsrussell
     - icon: twitter
       text: Twitter
-      href: https://twitter.com/ConnairRussell     
+      href: https://twitter.com/ConnairRussell    
+    - icon: none
+      text: .{{< ai google-scholar >}} Google Scholar 
+      href: https://scholar.google.co.uk/citations?user=EyDCgE8AAAAJ&hl=en   
+    - icon: linkedin
+      text: Linkedin
+      href: https://www.linkedin.com/in/connairrussell/         
 ---
 
 :::{#aboutme}
 
 ## About Me
+
+**This site is a work in progress!!**
 
 I am currently a postdoc working as a Research Fellow at Queen's University Belfast, on the core [Explaining Atheism](https://www.explainingatheism.org/research/core-research) project.
 
@@ -51,4 +59,30 @@ Prior to joining the EA team i completed my PhD in 2022. Based at the [Max Planc
 
 :::
 
-This is some random text
+<style>
+.colored-background {
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-radius: 0px;
+    width: 100%; /* Set width to 100% to span the entire width */
+    box-sizing: border-box; /* Maintain padding within the width */
+}
+</style>
+
+<div class="colored-background">
+
+### Projects:
+
+</div>
+
+### Publications:
+
+<div class="colored-background">
+
+### Contact:
+
+ [Email me here!](mailto:connairrussell@live.com)
+
+ [or DM me on Twitter!](https://twitter.com/ConnairRussell)
+
+</div>
