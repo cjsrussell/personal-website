@@ -10,9 +10,9 @@
   "Lua.runtime.version": "Lua 5.3",
   "Lua.workspace.checkThirdParty": false,
   "Lua.workspace.library": [
-    "C:\\Users\\conna\\AppData\\Local\\Programs\\Quarto\\share\\lua-types"
+    "C:\\Users\\3057372\\AppData\\Local\\Programs\\Quarto\\share\\lua-types"
   ],
-  "Lua.runtime.plugin": "C:\\Users\\conna\\AppData\\Local\\Programs\\Quarto\\share\\lua-plugin\\plugin.lua",
+  "Lua.runtime.plugin": "C:\\Users\\3057372\\AppData\\Local\\Programs\\Quarto\\share\\lua-plugin\\plugin.lua",
   "Lua.completion.showWord": "Disable",
   "Lua.completion.keywordSnippet": "Both",
   "Lua.diagnostics.disable": [
