@@ -2,7 +2,7 @@
 title: "Connair's Blog"
 listing:
   contents: posts
-  sort: "name"
+  sort: "date desc"
   type: table
   categories: true
   sort-ui: true
