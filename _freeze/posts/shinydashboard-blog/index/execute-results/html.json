@@ -1,7 +1,7 @@
 {
-  "hash": "e2dbd11da0ec84e498184d8bf8440fe1",
+  "hash": "0d1a4982351070ba7ac7626a79aa11e5",
   "result": {
-    "markdown": "---\ntitle: \"Building a Simple Shiny Dashboard in R\"\nauthor: \"Connair Russell\"\ncategories: [Tutorial, Code, Shiny, R]\nimage: image.jpg\nformat:\n  html:\n    code-fold: true\n    code-summary: \"Show the code\"\n---\n\n\nThis is a post with code.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\n\nggplot(mpg) +\n  geom_jitter(aes(cty, hwy), size = 4, alpha = 0.5) \n```\n:::\n",
+    "markdown": "---\ntitle: \"Building a Simple Shiny Dashboard in R\"\nauthor: \"Connair Russell\"\ncategories: [Tutorial, Code, Shiny, R]\nimage: image.jpg\ndescription: \"A tutorial on how to create a data dashboard using the R package *shinydashboard*\"\nformat:\n  html:\n    code-fold: true\n    code-summary: \"Show the code\"\n---\n\n\nThis is a post with code.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\n\nggplot(mpg) +\n  geom_jitter(aes(cty, hwy), size = 4, alpha = 0.5) \n```\n:::\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"

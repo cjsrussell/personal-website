@@ -1,7 +1,7 @@
 ---
 title: "Creating a Data Codebook in Quarto"
 author: "Connair Russell"
-date: "2023-08-15"
+description: "A step by step guide on how to create a codebook for your dataset"
 image: image.jpg
 categories: [Tutorial, Quarto, Code, Open Science]
 ---

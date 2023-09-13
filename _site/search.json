@@ -2,7 +2,7 @@
   {
     "objectID": "posts/website-blog/index.html",
     "href": "posts/website-blog/index.html",
-    "title": "Recreating Hugo Academic in Quarto (building this website)",
+    "title": "Recreating Hugo Academic in Quarto",
     "section": "",
     "text": "This is a post with code."
   },
@@ -11,21 +11,21 @@
     "href": "blog.html",
     "title": "Connair’s Blog",
     "section": "",
-    "text": "Recreating Hugo Academic in Quarto (building this website)\n\n\n\n\n\n\n\nTutorial\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nCreating a Data Codebook in Quarto\n\n\n\n\n\n\n\nTutorial\n\n\nQuarto\n\n\nCode\n\n\nOpen Science\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nBuilding a Simple Shiny Dashboard in R\n\n\n\n\n\n\n\nTutorial\n\n\nCode\n\n\nShiny\n\n\nR\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "Recreating Hugo Academic in Quarto\n\n\n\nTutorial\n\n\nQuarto\n\n\n\nA guide on how i built this website by recreating the Hugo Academic website theme in Quarto\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreating a Data Codebook in Quarto\n\n\n\nTutorial\n\n\nQuarto\n\n\nCode\n\n\nOpen Science\n\n\n\nA step by step guide on how to create a codebook for your dataset\n\n\n\n\n\n\n\n\n\n\n\n\n\nBuilding a Simple Shiny Dashboard in R\n\n\n\nTutorial\n\n\nCode\n\n\nShiny\n\n\nR\n\n\n\nA tutorial on how to create a data dashboard using the R package shinydashboard\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Connair J. S. Russell",
     "section": "",
-    "text": "GitHub\n  \n  \n    \n     Twitter\n  \n  \n    \n     . Google Scholar\n  \n  \n    \n     Linkedin\n  \n\n  \n  \n\n\nThis site is a work in progress!!\nI am currently a postdoc working as a Research Fellow at Queen’s University Belfast, on the core Explaining Atheism project.\nI am interested in the Cognitive Science of Religion, or more specifically, the Cognitive Science of Non-Religion. The Explaining Atheism project is investigating the major psychological and social factors influencing non-belief (e.g. Cognitive Biases, Religious Socialisation). We are examining this across cultures, and in particular, we look to use modern causal inference techniques to look at the causal pathways to non-belief (as best we can).\nPrior to joining the EA team i completed my PhD in 2022. Based at the Max Planck Institute for Human Development in Berlin, my PhD looked at cognitive biases in how we learn and generalise different kinds of information.\n\n\n\n\n\nCognitive Science of Religion\n\n\n\n\n\n\n\n\n PhD in Psychology, 2022\n\nMax Planck Institute for Human Development, & Freie Universität Berlin"
+    "text": "GitHub\n  \n  \n    \n     Twitter\n  \n  \n    \n     . Google Scholar\n  \n  \n    \n     Linkedin\n  \n\n  \n  \n\n\nI am currently a postdoc working as a Research Fellow at Queen’s University Belfast, on the core Explaining Atheism project.\nI am interested in the Cognitive Science of Religion, or more specifically, the Cognitive Science of Non-Religion. The Explaining Atheism project is investigating the major psychological and social factors influencing non-belief (e.g. Cognitive Biases, Religious Socialisation). We are examining this across cultures, and in particular, we look to use modern causal inference techniques to look at the causal pathways to non-belief (as best we can).\nPrior to joining the EA team i completed my PhD in 2022. Based at the Max Planck Institute for Human Development in Berlin, my PhD looked at cognitive biases in how we learn and generalise different kinds of information.\n\n\n\n\n\nCognitive Science of Religion\n\n\n\n\n\n\n\n\n PhD in Psychology, 2022\n\nMax Planck Institute for Human Development, & Freie Universität Berlin"
   },
   {
     "objectID": "index.html#about-me",
     "href": "index.html#about-me",
     "title": "Connair J. S. Russell",
     "section": "",
-    "text": "This site is a work in progress!!\nI am currently a postdoc working as a Research Fellow at Queen’s University Belfast, on the core Explaining Atheism project.\nI am interested in the Cognitive Science of Religion, or more specifically, the Cognitive Science of Non-Religion. The Explaining Atheism project is investigating the major psychological and social factors influencing non-belief (e.g. Cognitive Biases, Religious Socialisation). We are examining this across cultures, and in particular, we look to use modern causal inference techniques to look at the causal pathways to non-belief (as best we can).\nPrior to joining the EA team i completed my PhD in 2022. Based at the Max Planck Institute for Human Development in Berlin, my PhD looked at cognitive biases in how we learn and generalise different kinds of information.\n\n\n\n\n\nCognitive Science of Religion\n\n\n\n\n\n\n\n\n PhD in Psychology, 2022\n\nMax Planck Institute for Human Development, & Freie Universität Berlin"
+    "text": "I am currently a postdoc working as a Research Fellow at Queen’s University Belfast, on the core Explaining Atheism project.\nI am interested in the Cognitive Science of Religion, or more specifically, the Cognitive Science of Non-Religion. The Explaining Atheism project is investigating the major psychological and social factors influencing non-belief (e.g. Cognitive Biases, Religious Socialisation). We are examining this across cultures, and in particular, we look to use modern causal inference techniques to look at the causal pathways to non-belief (as best we can).\nPrior to joining the EA team i completed my PhD in 2022. Based at the Max Planck Institute for Human Development in Berlin, my PhD looked at cognitive biases in how we learn and generalise different kinds of information.\n\n\n\n\n\nCognitive Science of Religion\n\n\n\n\n\n\n\n\n PhD in Psychology, 2022\n\nMax Planck Institute for Human Development, & Freie Universität Berlin"
   },
   {
     "objectID": "posts/shinydashboard-blog/index.html",

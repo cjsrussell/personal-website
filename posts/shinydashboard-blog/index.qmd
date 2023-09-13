@@ -3,6 +3,7 @@ title: "Building a Simple Shiny Dashboard in R"
 author: "Connair Russell"
 categories: [Tutorial, Code, Shiny, R]
 image: image.jpg
+description: "A tutorial on how to create a data dashboard using the R package *shinydashboard*"
 format:
   html:
     code-fold: true

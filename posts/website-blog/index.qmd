@@ -1,6 +1,7 @@
 ---
-title: "Recreating Hugo Academic in Quarto (building this website)"
+title: "Recreating Hugo Academic in Quarto"
 author: "Connair Russell"
+description: "A guide on how i built this website by recreating the Hugo Academic website theme in Quarto"
 categories: [Tutorial, Quarto]
 image: image.jpg
 format:

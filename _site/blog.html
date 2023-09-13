@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-image','listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -172,21 +172,18 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Tutorial,Quarto" data-listing-file-modified-sort="1694626068854" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/website-blog/index.html"> <img src="./posts/website-blog/image.jpg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/website-blog/index.html">
-<h3 class="no-anchor listing-title">
-Recreating Hugo Academic in Quarto (building this website)
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="Tutorial,Quarto" data-listing-file-modified-sort="1694628351439" data-listing-reading-time-sort="1">
+<a href="./posts/website-blog/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./posts/website-blog/image.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Recreating Hugo Academic in Quarto
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Tutorial'); return false;">
 Tutorial
@@ -195,29 +192,23 @@ Tutorial
 Quarto
 </div>
 </div>
-<a href="./posts/website-blog/index.html">
-<div class="listing-description">
-This is a post with code.
+<div class="card-text listing-description">
+A guide on how i built this website by recreating the Hugo Academic website theme in Quarto
+</div>
+</div>
 </div>
 </a>
 </div>
-<div class="metadata">
-<a href="./posts/website-blog/index.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Tutorial,Quarto,Code,Open Science" data-listing-date-sort="1692054000000" data-listing-file-modified-sort="1694625756401" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/codebook-blog/index.html"> <img src="./posts/codebook-blog/image.jpg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/codebook-blog/index.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="1" data-categories="Tutorial,Quarto,Code,Open Science" data-listing-file-modified-sort="1694628244998" data-listing-reading-time-sort="1">
+<a href="./posts/codebook-blog/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./posts/codebook-blog/image.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Creating a Data Codebook in Quarto
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Tutorial'); return false;">
 Tutorial
@@ -232,29 +223,23 @@ Code
 Open Science
 </div>
 </div>
-<a href="./posts/codebook-blog/index.html">
-<div class="listing-description">
-
+<div class="card-text listing-description">
+A step by step guide on how to create a codebook for your dataset
+</div>
+</div>
 </div>
 </a>
 </div>
-<div class="metadata">
-<a href="./posts/codebook-blog/index.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Tutorial,Code,Shiny,R" data-listing-file-modified-sort="1694625818685" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/shinydashboard-blog/index.html"> <img src="./posts/shinydashboard-blog/image.jpg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/shinydashboard-blog/index.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="2" data-categories="Tutorial,Code,Shiny,R" data-listing-file-modified-sort="1694628281761" data-listing-reading-time-sort="1">
+<a href="./posts/shinydashboard-blog/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./posts/shinydashboard-blog/image.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Building a Simple Shiny Dashboard in R
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Tutorial'); return false;">
 Tutorial
@@ -269,15 +254,12 @@ Shiny
 R
 </div>
 </div>
-<a href="./posts/shinydashboard-blog/index.html">
-<div class="listing-description">
-This is a post with code.
+<div class="card-text listing-description">
+A tutorial on how to create a data dashboard using the R package <em>shinydashboard</em>
+</div>
+</div>
 </div>
 </a>
-</div>
-<div class="metadata">
-<a href="./posts/shinydashboard-blog/index.html"> </a>
-</div>
 </div>
 </div>
 <div class="listing-no-matching d-none">

@@ -1,5 +1,6 @@
 ---
 title: "Connair J. S. Russell"
+subtitle: "Research Fellow, <br> Queen's University Belfast"
 comments: false
 image: profile.jpg
 page-layout: full
@@ -24,8 +25,6 @@ about:
 :::{#aboutme}
 
 ## About Me
-
-**This site is a work in progress!!**
 
 I am currently a postdoc working as a Research Fellow at Queen's University Belfast, on the core [Explaining Atheism](https://www.explainingatheism.org/research/core-research) project.
 
