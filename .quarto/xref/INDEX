@@ -10,5 +10,14 @@
   },
   "posts/welcome/index.qmd": {
     "index.html": "d1d09d66"
+  },
+  "posts/shinydashboard-blog/index.qmd": {
+    "index.html": "0340fc18"
+  },
+  "posts/codebook-blog/index.qmd": {
+    "index.html": "377d5df1"
+  },
+  "posts/website-blog/index.qmd": {
+    "index.html": "e987ba03"
   }
 }

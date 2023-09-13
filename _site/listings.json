@@ -2,8 +2,9 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/welcome/index.html",
-      "/posts/post-with-code/index.html"
+      "/posts/website-blog/index.html",
+      "/posts/codebook-blog/index.html",
+      "/posts/shinydashboard-blog/index.html"
     ]
   }
 ]

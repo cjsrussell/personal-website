@@ -1,0 +1,12 @@
+---
+title: "Recreating Hugo Academic in Quarto (building this website)"
+author: "Connair Russell"
+categories: [Tutorial, Quarto]
+image: image.jpg
+format:
+  html:
+    code-fold: true
+    code-summary: "Show the code"
+---
+
+This is a post with code.

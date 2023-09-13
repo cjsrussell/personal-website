@@ -1,0 +1,14 @@
+{
+  "hash": "05eed29f37bb4ead829e2c345d963137",
+  "result": {
+    "markdown": "---\ntitle: \"Building a Simple Shiny Dashboard\"\nauthor: \"Connair Russell\"\ncategories: [tutorial, code, shiny, R]\nformat:\n  html:\n    code-fold: true\n    code-summary: \"Show the code\"\n---\n\n\nThis is a post with code.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\n\nggplot(mpg) +\n  geom_jitter(aes(cty, hwy), size = 4, alpha = 0.5) \n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

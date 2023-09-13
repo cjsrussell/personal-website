@@ -1,0 +1,20 @@
+---
+title: "Building a Simple Shiny Dashboard in R"
+author: "Connair Russell"
+categories: [Tutorial, Code, Shiny, R]
+image: image.jpg
+format:
+  html:
+    code-fold: true
+    code-summary: "Show the code"
+---
+
+This is a post with code.
+
+
+```{r, eval = FALSE}
+library(tidyverse)
+
+ggplot(mpg) +
+  geom_jitter(aes(cty, hwy), size = 4, alpha = 0.5) 
+```
