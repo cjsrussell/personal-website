@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-description','listing-reading-time','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title','listing-description','listing-reading-time','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
       searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
@@ -173,24 +173,11 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
 <div class="list quarto-listing-default">
 <div class="quarto-post image-right" data-index="0" data-categories="news" data-listing-date-sort="1692054000000" data-listing-file-modified-sort="1692359926000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./posts/welcome/index.html"> <p class="card-img-top"><img src="posts\welcome\thumbnail.jpg"  class="thumbnail-image card-img"/></p> </a></p>
+</div>
 <div class="body">
 <a href="./posts/welcome/index.html">
 <h3 class="no-anchor listing-title">
@@ -220,6 +207,9 @@ This is the first post in a Quarto blog. Welcome!
 </div>
 </div>
 <div class="quarto-post image-right" data-index="1" data-categories="news,code,analysis" data-listing-date-sort="NaN" data-listing-file-modified-sort="1694614331473" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./posts/post-with-code/index.html"> <img src="./posts/post-with-code/image.jpg" class="thumbnail-image"> </a></p>
+</div>
 <div class="body">
 <a href="./posts/post-with-code/index.html">
 <h3 class="no-anchor listing-title">

@@ -5,9 +5,7 @@ listing:
   sort: "title desc"
   type: default
   categories: true
-  sort-ui: true
-  filter-ui: true
-  fields: [title, description, reading-time, categories]
+  fields: [image, title, description, reading-time, categories]
   feed: true
 page-layout: full
 title-block-banner: false
