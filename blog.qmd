@@ -3,7 +3,7 @@ title: "Connair's Blog"
 listing:
   contents: posts
   sort: "title desc"
-  type: grid
+  type: default
   categories: true
   sort-ui: true
   filter-ui: true
