@@ -27,6 +27,8 @@ about:
 
 **This site is a work in progress!!**
 
+test
+
 I am currently a postdoc working as a Research Fellow at Queen's University Belfast, on the core [Explaining Atheism](https://www.explainingatheism.org/research/core-research) project.
 
 I am interested in the Cognitive Science of Religion, or more specifically, the Cognitive Science of *Non*-Religion. The Explaining Atheism project is investigating the major psychological and social factors influencing non-belief (e.g. Cognitive Biases, Religious Socialisation). We are examining this across cultures, and in particular, we look to use modern causal inference techniques to look at the causal pathways to non-belief (as best we can).
