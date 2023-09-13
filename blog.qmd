@@ -3,7 +3,7 @@ title: "Connair's Blog"
 listing:
   contents: posts
   sort: "name"
-  type: default
+  type: table
   categories: true
   sort-ui: true
   filter-ui: true
