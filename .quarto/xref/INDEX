@@ -19,5 +19,8 @@
   },
   "posts/website-blog/index.qmd": {
     "index.html": "e987ba03"
+  },
+  "posts/codebook-blog/index.rmarkdown": {
+    "index.html": "04a91aad"
   }
 }

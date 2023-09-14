@@ -5,7 +5,7 @@ listing:
   sort: "title desc"
   type: grid
   categories: true
-  fields: [image, title, description, categories]
+  fields: [reading-time, image, title, description, categories]
   feed: false
 page-layout: full
 title-block-banner: false

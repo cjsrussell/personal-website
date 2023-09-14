@@ -1,7 +1,7 @@
 ---
 title: "Recreating Hugo Academic in Quarto"
 author: "Connair Russell"
-description: "A guide on how i built this website by recreating the Hugo Academic website theme in Quarto"
+description: "A guide on how I built this website by recreating the Hugo Academic website theme in Quarto"
 categories: [Tutorial, Quarto]
 image: image.jpg
 format:
@@ -9,5 +9,8 @@ format:
     code-fold: true
     code-summary: "Show the code"
 ---
+
+
+![](giphy.gif)
 
 This is a post with code.
