@@ -8,7 +8,7 @@ categories: [Tutorial, Quarto, Code, Open Science]
 
 ## What is a codebook and why do i need one?
 
-Codebooks (or data dictionaries) are the documentation for your data. At the very minimum they contain the definitions of your variables, and at best they include additional information such as question text, response scales, and variable coding schemes.
+Codebooks (or data dictionaries) are the documentation for your data. At the very minimum they contain the definitions of your variables, and at best they include additional information about your data such as question text, response scales, and variable coding schemes.
 
 In this brief guide I will go through how and why you might want to create a codebook, hopefully showing how simple it is. We will do this using Quarto in RStudio, allowing us to have both offline (PDF) and online versions of the same document. All of this can be done in VS Code or other platforms and the Quarto documentation has you covered there (see links below).
 
@@ -77,7 +77,7 @@ format:
 
 We can now see what this Word document and a PDF would look like! You can do this by clicking the dropdown in RStudio:
 
-![](render.jpg)
+![](render.jpg) <br>
 
 or by running the following in the terminal (not the R console, the other tab!). This will create a \_book folder in your directory in which you can see PDF and a .docx file of your book:
 
@@ -95,9 +95,13 @@ You can choose whether it previews the website version of our book in the RStudi
 
 ![](prev.jpg)
 
+<br>
+
+Ok so we have now set up our blank book. We now need to decide what we're going to fill it with!
+
 ### What's going in our codebook?
 
-At the very minimum it is typically recommended that a codebook should probably have the following information, we will go through and make an example with all of these shortly:
+At the very minimum it is typically recommended that a codebook should probably have some of the following information (i've chosen these specifically for psych style research), we will go through and make an example with all of these shortly:
 
 +---------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Variable name:            | the name of the variable in your script/datafile                                                                                                     |
@@ -131,11 +135,11 @@ Lets imagine we are running a study on exercise and mental health and want to cr
 
 The first thing we want to do is decide how we are going to structure it. For this example we will have an overview page with a minimal codebook, along with more detailed pages for our different measures. We'll create the more detailed version first and condense this into the minimal version at the end.
 
-#### Lets create our first page!
+#### Lets create an example page!
 
-Imagine we want to summarize one of our anxiety measures, say Trait Anxiety. To create a page in our book for this we just need to create a new .qmd file.
+Imagine we want to summarize one of our anxiety measures, say a questionnaire measure of Trait Anxiety. To create a page in our book for this we just need to create a new .qmd file.
 
-![](newfile.jpg)
+![](newfile.jpg) <br>
 
 Lets title it "Trait Anxiety", and save it as "traitanx.qmd" in the directory of our project. You'll end up with a blank document which we will start to populate.
 
@@ -149,8 +153,123 @@ Here is what that looks like in the visual editor:
 
 ![](tanx_vis.jpg)
 
+<br>
+
 and source editor:
 
 ![](tanx_source.jpg)
 
-We can now fill in the information
+<br>
+
+We can now fill in the information for these sections.
+
+Under the Measure section we can add an overview of our measure, including a citation if we want. To add a citation you can click insert -\> Citation:
+
+![](insertcit.jpg)
+
+<br>
+
+This will then give you the possible citations. These can be from a number of sources such as the references.bib file in your project diectory (you can get .bib files from exporting from most citation managers), or if like me you use Zotero you can access your library directly:
+
+![](cite.jpg) <br>
+
+Whatever citation you insert would then automatically be in the references.qmd page when it is rendered.
+
+After we have outlined the measure we can now move on to the Questions section. Here we can specify the questions asked in this particular measure. We can do this by inserting a table (this is horrible in Markdown so I'd use the visual editor for this). This is done by selecting Table -\> Insert Table at the top of the page.
+
+So we should have something like this so far:
+
+![](tanxtab.jpg)
+
+<br>
+
+We can now move on to the next section response options. Here we could again use a table to show what response options were used for this question:
+
+![](resps.jpg)
+
+<br>
+
+In the next part Response Coding, we can specify how we coded these response options, if anything was reverse coded, and even include our scripts for this coding. You can insert a code chunk via the insert menu in the gui, or with the relevant syntax. Here is an example including a chunk of R code with a hypothetical function to code the responses.
+
+![](respcode.jpg)
+
+<br>
+
+`NOTE: if you include a codeblock like this, be sure to include eval=FALSE, this makes sure that r wont try to run the code when you render your codebook`
+
+We can now move on to the Scoring section where again we can add a description and possible script for how this was done. For example:
+
+![](scoring.jpg)
+
+<br>
+
+Finally we can create the outline of our variables from this measure. Again, I'd use a table for this:
+
+![](variables-tanx.jpg)
+
+**We've finished our first page!**
+
+If you preview this (using the render button noted above) you should end up with a webpage version that looks a bit like this:
+
+![](htmlprev.gif)
+
+<br> <br> <br> <br>
+
+and a PDF page that looks like this:
+
+<br> <br> <br> <br>
+
+![](pdfprev.gif)
+
+#### Adding our page(s) to our book
+
+So we now have a page for one of our measures. I'm going to duplicate this and pretend that we have done multiple other pages too. One for state anxiety, two for excersise (subjective and objective), and a page for our demographic measures.
+
+We add these to our book through the file called \_quarto.yaml. This should currently look like this:
+
+![](og-yaml.jpg) <br>
+
+We can update what pages are in our book by changing the "chapters" element like so:
+
+![](newyaml.jpg)
+
+This will create a book for us with each of the elements of "chapters" as, wait for it, chapters!
+
+To render the book just go to the terminal at the bottom of RStudio and type
+
+`quarto render`
+
+![](render.gif)
+
+You now have the full book in .docx and PDF in the \_book folder. But we're not done yet! We will quickly make a quickfire codebook page, and then we will publish the codebook as an online book!
+
+#### Brief codebook
+
+In addition to the individual pages which have all the detail, we can create a shorter quick reference codebook with just the variables. We will create a new Quarto file called codebook-quick.qmd to do this.
+
+To make this easy to use we will split it into variables and individual questions. We will then just put in the variables from our various pages. As simple as that. For example, it could look like this:
+
+![](codebookquick.jpg) Add that to \_quarto.yaml, render it again, and you're good to go!
+
+### Publishing your codebook online!
+
+We now have our offline codebooks and the last things to do is get our version online.
+
+This is incredibly easy, its as simple as typing
+
+`quarto publish`
+
+in the terminal... well sort of. You need to choose where you're publishing it first. There are a number of options and guides for these [here](https://quarto.org/docs/publishing/), but ill run you through publishing it on Quarto's own platform for free.
+
+To do that you type this into the terminal:
+
+`quarto publish quarto-pub`
+
+running this will ask you to set up a Quarto Pub account. You do this on their website [here](https://quartopub.com/), and then come back to RStudio and simply follow the prompts in the terminal! Easy peasy.
+
+<br>
+<br>
+
+##### You now have an offline and an online documentation for your data. I hope this was helpful :)
+
+![](bye.gif)

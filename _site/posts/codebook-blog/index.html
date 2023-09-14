@@ -159,6 +159,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#what-is-quarto" id="toc-what-is-quarto" class="nav-link" data-scroll-target="#what-is-quarto">What is Quarto?</a></li>
   <li><a href="#setting-up-a-quarto-book" id="toc-setting-up-a-quarto-book" class="nav-link" data-scroll-target="#setting-up-a-quarto-book">Setting up a Quarto book</a></li>
   <li><a href="#whats-going-in-our-codebook" id="toc-whats-going-in-our-codebook" class="nav-link" data-scroll-target="#whats-going-in-our-codebook">What’s going in our codebook?</a></li>
+  <li><a href="#building-our-codebook" id="toc-building-our-codebook" class="nav-link" data-scroll-target="#building-our-codebook">Building our codebook</a></li>
+  <li><a href="#publishing-your-codebook-online" id="toc-publishing-your-codebook-online" class="nav-link" data-scroll-target="#publishing-your-codebook-online">Publishing your codebook online!</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -202,13 +204,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="what-is-a-codebook-and-why-do-i-need-one" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-a-codebook-and-why-do-i-need-one">What is a codebook and why do i need one?</h2>
-<p>Codebooks (or data dictionaries) are the documentation for your data. At the very minimum they contain the definitions of your variables, and at best they include additional information such as question text, response scales, and variable coding schemes.</p>
+<p>Codebooks (or data dictionaries) are the documentation for your data. At the very minimum they contain the definitions of your variables, and at best they include additional information about your data such as question text, response scales, and variable coding schemes.</p>
 <p>In this brief guide I will go through how and why you might want to create a codebook, hopefully showing how simple it is. We will do this using Quarto in RStudio, allowing us to have both offline (PDF) and online versions of the same document. All of this can be done in VS Code or other platforms and the Quarto documentation has you covered there (see links below).</p>
 <p>For simple datasets a single page document might be fine, but for more complex datasets with nontrivial coding schemes more clear documentation is helpful.</p>
 <section id="for-you" class="level4">
 <h4 class="anchored" data-anchor-id="for-you">For you</h4>
 <p>It’s very easy to wax lyrical about the importance of open data and its key role in improving psychological and other sciences hit by recent crises, and i’ll do that in the next section, but perhaps the biggest beneficiary of good documentation will be you!</p>
 <p>When we’re working on projects we are often so deep into what we’re doing that forgetting some important information is inconceivable, but in a few years you want to be able to understand your work just as well. Keeping clear documentation of exactly what you did to end up with the datafile you have allows you to jump right back in without the befuddlement of trying to interpret the variable names created by your former self.</p>
+<p>Another great benefit is that it can help with consistency across datasets and projects. If you have a specific variable scheme for a measure you use frequently, keeping a codebook can help you stay consistent.</p>
 </section>
 <section id="for-science" class="level4">
 <h4 class="anchored" data-anchor-id="for-science">For Science!</h4>
@@ -227,7 +230,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="setting-up-a-quarto-book" class="level3">
 <h3 class="anchored" data-anchor-id="setting-up-a-quarto-book">Setting up a Quarto book</h3>
-<p>To get started we will need to create a project. If you have not used projects before they are a nice tidy way to keep related files collected together in their own directory.</p>
+<p>To get started we will need to create a blank book project. If you have not used projects before they are a nice tidy way to keep related files collected together in their own directory.</p>
 <p>We will use the Quarto Book format and to create one you go to:</p>
 <p>File -&gt; New Project… -&gt; New Diectory -&gt; Quarto Book</p>
 <p>You can then choose the folder name for your directory, and where you want it to be stored. If you use renv and/or git you can tick those options, but they’re not needed to make it work.</p>
@@ -248,24 +251,154 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>   toc<span class="sc">:</span> true                     <span class="co"># this enables table of contents</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>   number<span class="sc">-</span>sections<span class="sc">:</span> true         <span class="co"># this enables section numbering</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>We can now see what this document and a PDF would look like! You can do this by clicking the dropdown in RStudio:</p>
-<p><img src="render.jpg" class="img-fluid"></p>
-<p>or by running the following in the terminal (not the R console, the other tab!). This will create a _book folder in your directory in which you can see PDF and a .doc file of your book:</p>
+<p>We can now see what this Word document and a PDF would look like! You can do this by clicking the dropdown in RStudio:</p>
+<p><img src="render.jpg" class="img-fluid"> <br></p>
+<p>or by running the following in the terminal (not the R console, the other tab!). This will create a _book folder in your directory in which you can see PDF and a .docx file of your book:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>quarto render</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>and we can preview the web version would look like by running the following:</p>
+<p>and we can preview the web version from the console, too:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>quarto preview</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>You can choose whether it renders the website in the RStudio viewer pane, or an external window (e.g.&nbsp;browser). To do this just click ther cog icon:</p>
+<p>You can choose whether it previews the website version of our book in the RStudio viewer pane, or an external window (e.g.&nbsp;browser). To do this just click the cog icon:</p>
 <p><img src="prev.jpg" class="img-fluid"></p>
+<p><br></p>
+<p>Ok so we have now set up our blank book. We now need to decide what we’re going to fill it with!</p>
 </section>
 <section id="whats-going-in-our-codebook" class="level3">
 <h3 class="anchored" data-anchor-id="whats-going-in-our-codebook">What’s going in our codebook?</h3>
-<p>At the very minimum a codebook should have the following:</p>
+<p>At the very minimum it is typically recommended that a codebook should probably have some of the following information (i’ve chosen these specifically for psych style research), we will go through and make an example with all of these shortly:</p>
+<table class="table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 84%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Variable name:</td>
+<td>the name of the variable in your script/datafile</td>
+</tr>
+<tr class="even">
+<td>Variable Label</td>
+<td>a human readable description of the variable</td>
+</tr>
+<tr class="odd">
+<td>Variable definition</td>
+<td>What is the variable? Is it a response to a specific question? Is it an index scoring a number of items (e.g., a mean), if so how was this computed?</td>
+</tr>
+<tr class="even">
+<td>Variable type</td>
+<td>Is this a numerical variable? categorical?</td>
+</tr>
+<tr class="odd">
+<td>Units (if applicable)</td>
+<td>The unit of measurement for the variable</td>
+</tr>
+<tr class="even">
+<td><p>Response options</p>
+<p>(if applicable)</p></td>
+<td>The range of possible response options for the variable</td>
+</tr>
+<tr class="odd">
+<td><p>Response coding</p>
+<p>(if applicable)</p></td>
+<td>How response options were coded or scored.</td>
+</tr>
+<tr class="even">
+<td><p>Missing data/ error codes</p>
+<p>(if applicable)</p></td>
+<td>Specific responses used to code things such as missing data, errors etc.</td>
+</tr>
+</tbody>
+</table>
+<p>It is also incredibly valuable to include information about the measures from which your variables are derived. We will do this in our example, too.</p>
+</section>
+<section id="building-our-codebook" class="level3">
+<h3 class="anchored" data-anchor-id="building-our-codebook">Building our codebook</h3>
+<p>Lets imagine we are running a study on exercise and mental health and want to create a data dictionary for this. Our hypothetical dataset includes questionnaire questions, indices from these, and objective excersise measures. In the interests of open science we want to make the codebook as comprehensive as possible.</p>
+<p>The first thing we want to do is decide how we are going to structure it. For this example we will have an overview page with a minimal codebook, along with more detailed pages for our different measures. We’ll create the more detailed version first and condense this into the minimal version at the end.</p>
+<section id="lets-create-an-example-page" class="level4">
+<h4 class="anchored" data-anchor-id="lets-create-an-example-page">Lets create an example page!</h4>
+<p>Imagine we want to summarize one of our anxiety measures, say a questionnaire measure of Trait Anxiety. To create a page in our book for this we just need to create a new .qmd file.</p>
+<p><img src="newfile.jpg" class="img-fluid"> <br></p>
+<p>Lets title it “Trait Anxiety”, and save it as “traitanx.qmd” in the directory of our project. You’ll end up with a blank document which we will start to populate.</p>
+<p>If using a recent version of RStudio you will see that you can edit the documents in both “Visual” and “Source” modes. Both work fine, in source you write in markdown, where as the visual editor lets us do things like insert tables and citations using the GUI instead of writing the code. We’ll mainly use the visual editor for simplicity.</p>
+<p>Underneath the info codechunk at the top of the page we will add some sections to describe our Trait Anxiety measure. In markdown you specify headers with # followed by a space then the header, and this is how you do it both in the visual and source editors. So to get the heading “Measure” we would type “## Measure”. ## is a level 2 heading, ### a level three heading and so on.</p>
+<p>We will now add headers for the different elements we want to include in our codebook.</p>
+<p>Here is what that looks like in the visual editor:</p>
+<p><img src="tanx_vis.jpg" class="img-fluid"></p>
+<p><br></p>
+<p>and source editor:</p>
+<p><img src="tanx_source.jpg" class="img-fluid"></p>
+<p><br></p>
+<p>We can now fill in the information for these sections.</p>
+<p>Under the Measure section we can add an overview of our measure, including a citation if we want. To add a citation you can click insert -&gt; Citation:</p>
+<p><img src="insertcit.jpg" class="img-fluid"></p>
+<p><br></p>
+<p>This will then give you the possible citations. These can be from a number of sources such as the references.bib file in your project diectory (you can get .bib files from exporting from most citation managers), or if like me you use Zotero you can access your library directly:</p>
+<p><img src="cite.jpg" class="img-fluid"> <br></p>
+<p>Whatever citation you insert would then automatically be in the references.qmd page when it is rendered.</p>
+<p>After we have outlined the measure we can now move on to the Questions section. Here we can specify the questions asked in this particular measure. We can do this by inserting a table (this is horrible in Markdown so I’d use the visual editor for this). This is done by selecting Table -&gt; Insert Table at the top of the page.</p>
+<p>So we should have something like this so far:</p>
+<p><img src="tanxtab.jpg" class="img-fluid"></p>
+<p><br></p>
+<p>We can now move on to the next section response options. Here we could again use a table to show what response options were used for this question:</p>
+<p><img src="resps.jpg" class="img-fluid"></p>
+<p><br></p>
+<p>In the next part Response Coding, we can specify how we coded these response options, if anything was reverse coded, and even include our scripts for this coding. You can insert a code chunk via the insert menu in the gui, or with the relevant syntax. Here is an example including a chunk of R code with a hypothetical function to code the responses.</p>
+<p><img src="respcode.jpg" class="img-fluid"></p>
+<p><br></p>
+<p><code>NOTE: if you include a codeblock like this, be sure to include eval=FALSE, this makes sure that r wont try to run the code when you render your codebook</code></p>
+<p>We can now move on to the Scoring section where again we can add a description and possible script for how this was done. For example:</p>
+<p><img src="scoring.jpg" class="img-fluid"></p>
+<p><br></p>
+<p>Finally we can create the outline of our variables from this measure. Again, I’d use a table for this:</p>
+<p><img src="variables-tanx.jpg" class="img-fluid"></p>
+<p><strong>We’ve finished our first page!</strong></p>
+<p>If you preview this (using the render button noted above) you should end up with a webpage version that looks a bit like this:</p>
+<p><img src="htmlprev.gif" class="img-fluid"></p>
+<p><br> <br> <br> <br></p>
+<p>and a PDF page that looks like this:</p>
+<p><br> <br> <br> <br></p>
+<p><img src="pdfprev.gif" class="img-fluid"></p>
+</section>
+<section id="adding-our-pages-to-our-book" class="level4">
+<h4 class="anchored" data-anchor-id="adding-our-pages-to-our-book">Adding our page(s) to our book</h4>
+<p>So we now have a page for one of our measures. I’m going to duplicate this and pretend that we have done multiple other pages too. One for state anxiety, two for excersise (subjective and objective), and a page for our demographic measures.</p>
+<p>We add these to our book through the file called _quarto.yaml. This should currently look like this:</p>
+<p><img src="og-yaml.jpg" class="img-fluid"> <br></p>
+<p>We can update what pages are in our book by changing the “chapters” element like so:</p>
+<p><img src="newyaml.jpg" class="img-fluid"></p>
+<p>This will create a book for us with each of the elements of “chapters” as, wait for it, chapters!</p>
+<p>To render the book just go to the terminal at the bottom of RStudio and type</p>
+<p><code>quarto render</code></p>
+<p><img src="render.gif" class="img-fluid"></p>
+<p>You now have the full book in .docx and PDF in the _book folder. But we’re not done yet! We will quickly make a quickfire codebook page, and then we will publish the codebook as an online book!</p>
+</section>
+<section id="brief-codebook" class="level4">
+<h4 class="anchored" data-anchor-id="brief-codebook">Brief codebook</h4>
+<p>In addition to the individual pages which have all the detail, we can create a shorter quick reference codebook with just the variables. We will create a new Quarto file called codebook-quick.qmd to do this.</p>
+<p>To make this easy to use we will split it into variables and individual questions. We will then just put in the variables from our various pages. As simple as that. For example, it could look like this:</p>
+<p><img src="codebookquick.jpg" class="img-fluid"> Add that to _quarto.yaml, render it again, and you’re good to go!</p>
+</section>
+</section>
+<section id="publishing-your-codebook-online" class="level3">
+<h3 class="anchored" data-anchor-id="publishing-your-codebook-online">Publishing your codebook online!</h3>
+<p>We now have our offline codebooks and the last things to do is get our version online.</p>
+<p>This is incredibly easy, its as simple as typing</p>
+<p><code>quarto publish</code></p>
+<p>in the terminal… well sort of. You need to choose where you’re publishing it first. There are a number of options and guides for these <a href="https://quarto.org/docs/publishing/">here</a>, but ill run you through publishing it on Quarto’s own platform for free.</p>
+<p>To do that you type this into the terminal:</p>
+<p><code>quarto publish quarto-pub</code></p>
+<p>running this will ask you to set up a Quarto Pub account. You do this on their website <a href="https://quartopub.com/">here</a>, and then come back to RStudio and simply follow the prompts in the terminal! Easy peasy.</p>
+<p><br> <br></p>
+<section id="you-now-have-an-offline-and-an-online-documentation-for-your-data.-i-hope-this-was-helpful" class="level5">
+<h5 class="anchored" data-anchor-id="you-now-have-an-offline-and-an-online-documentation-for-your-data.-i-hope-this-was-helpful">You now have an offline and an online documentation for your data. I hope this was helpful :)</h5>
+<p><img src="bye.gif" class="img-fluid"></p>
 
 
+</section>
 </section>
 </section>
 
