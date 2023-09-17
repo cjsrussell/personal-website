@@ -14,6 +14,10 @@ website:
         href: https://github.com/
       - icon: twitter
         href: https://twitter.com
+        
+bibliography: references.bib
+csl: apa.csl
+
 
 format:
   html:

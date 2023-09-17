@@ -15,16 +15,20 @@ about:
       text: Twitter
       href: https://twitter.com/ConnairRussell    
     - icon: none
-      text: .{{< ai google-scholar >}} Google Scholar 
+      text: "{{< ai google-scholar >}} Google Scholar"
       href: https://scholar.google.co.uk/citations?user=EyDCgE8AAAAJ&hl=en   
     - icon: linkedin
       text: Linkedin
       href: https://www.linkedin.com/in/connairrussell/         
+nocite: |
+  @russell2021dual
+
 ---
 
 :::{#aboutme}
 
 ## About Me
+
 
 I am currently a postdoc working as a Research Fellow at Queen's University Belfast, on the core [Explaining Atheism](https://www.explainingatheism.org/research/core-research) project.
 
@@ -39,7 +43,11 @@ Prior to joining the EA team i completed my PhD in 2022. Based at the [Max Planc
 ### Interests
 
 * Cognitive Science of Religion
-
+* Cultural Evolution
+* Open Science
+* R Stats
+* Quantitative Methods
+* Philosphy of Psychology
 :::
 
 ::: {.column width="10%"}
@@ -51,6 +59,9 @@ Prior to joining the EA team i completed my PhD in 2022. Based at the [Max Planc
 
  {{< fa graduation-cap >}} PhD in Psychology, 2022 
 : <span style="font-size: 75%;">*Max Planck Institute for Human Development, & Freie Universität Berlin*</span> 
+
+ {{< fa graduation-cap >}} MSc in Social & Cultural Psychology
+: <span style="font-size: 75%;">*London School of Economics and Political Science*</span> 
 
 :::
 
@@ -74,9 +85,15 @@ Prior to joining the EA team i completed my PhD in 2022. Based at the [Max Planc
 
 </div>
 
-### Publications:
+### Select Publications:
+
+
+::: {#refs}
+:::
 
 <div class="colored-background">
+
+
 
 ### Contact:
 
