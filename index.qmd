@@ -81,17 +81,13 @@ Prior to joining the EA team i completed my PhD in 2022. Based at the [Max Planc
 
 <div class="colored-background">
 
-### Projects:
-
-</div>
-
 ### Select Publications:
 
 
 ::: {#refs}
 :::
 
-<div class="colored-background">
+</div>
 
 
 
@@ -101,4 +97,3 @@ Prior to joining the EA team i completed my PhD in 2022. Based at the [Max Planc
 
  [or DM me on Twitter!](https://twitter.com/ConnairRussell)
 
-</div>
