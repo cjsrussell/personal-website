@@ -186,10 +186,11 @@ and then add the icon (in our case Google Scholar) to your YAML as follows:
 
 ``` yaml
 
-title: "About"
+title: "Howl J. Pendragon"
+subtitle: "Wizard <br> The Moving Castle"
 image: profile.jpg
 about:
-  template: jolla
+  template: trestles
   links:
     - icon: twitter
       text: Twitter
@@ -219,7 +220,7 @@ You can then just write your bio in plain text
 Greetings, I am Howl J. Pendragon, a wizard of considerable renown, though the academic establishment may frown upon my unconventional pursuits. Armed with a diploma from the "School of Enchanted Wisdom" (I assure you, it's accredited in magical circles), my scholarly journey involves deciphering cryptic runes, tinkering with potion recipes, and pondering the intricacies of broomstick aerodynamics. My magical treatises, disguised as spellbooks, have enchanted readers across fantastical realms. I've been an esteemed guest speaker at the Witches and Wizards Symposium and received a coveted Cauldron of Excellence award. Alas, the Muggle academic world may remain skeptical, but I shall persist in my mystical endeavors!
 ```
 
-A side tip here. Quarto is markdown based so you can use markdown syntax to do formatting, such as \*\* for *italics*; or "[linkname](link)" to create a hyperlink to a website or a link to a local file (e.g., you could link to your cv with `[click here for my cv](cv.pdf)`, where cv.pdf is in your project directory. You can also do most of this by switching to the visual editor in RStudio if you don't know any markdown (but google is your friend here). Switching to the visual editor is just clicking between the two at the tiop left of your RStuido file window.
+A side tip here. Quarto is markdown based so you can use markdown syntax to do formatting, such as \*\* for *italics*; or "[linkname](link)" to create a hyperlink to a website or a link to a local file (e.g., you could link to your cv with `[click here for my cv](cv.pdf)`, where cv.pdf is in your project directory). You can also do most of this by switching to the visual editor in RStudio if you don't know any markdown (but google is your friend here). Switching to the visual editor is just clicking between the two at the tiop left of your RStuido file window.
 
 We now have a semi-complete looking website!
 
