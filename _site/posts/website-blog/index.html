@@ -215,27 +215,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>So we will be using Quarto to build our website. Installing it is super easy and an installation guide can be found <a href="https://quarto.org/docs/get-started/">here</a>. I’ll be using RStudio for this example but all of this can also be done using other tools (I typically use VS Code) and these are also covered in the above link.</p>
 <section id="creating-a-project" class="level3">
 <h3 class="anchored" data-anchor-id="creating-a-project">Creating a project</h3>
-<p>To get started we will need to create a blank project. Projects are a nice tidy way to keep related files collected together in their own directory. However, instead of the Quarto Website project template, We will use the Quarto Blog format. This is just a special case of the website, and i’ll show you how you can turn off the blog part if you want. To create this project go to:</p>
+<p>To get started we will need to create a blank project. Projects are a nice tidy way to keep related files collected together in their own directory. However, instead of the Quarto Website project template, we will use the Quarto Blog format. This is just a special case of the website, and i’ll show you how you can turn off the blog part if you want. To create this project go to:</p>
 <p>File -&gt; New Project… -&gt; New Diectory -&gt; Quarto Blog</p>
-<p>If you use renv and/or git you can tick those options. Indeed, to host my website I use Git so for me that is necessary, but there are other ways to host the site if you don’t want to do it that way.</p>
+<p>If you use renv and/or git you can tick those options. Indeed, to host my website I use Git so for me that is necessary, but there are other ways to host the site if you don’t want to do it that way (scroll to the bottom of this blog for a link to how to publish your site).</p>
 <p><img src="project.gif" class="img-fluid"></p>
 </section>
 </section>
 <section id="our-website" class="level2">
 <h2 class="anchored" data-anchor-id="our-website">Our website</h2>
-<p>We now have a website. Job done. Well, almost. You now have a couple of folders and files in your directory. The important ones right now are:</p>
+<p>We now have a website. Job done. Well, almost. You now have a couple of folders and files in your directory we can update. The important ones right now are:</p>
 <p><b><strong><em>_quarto.yml</em></strong></b> - this is the main settings and contents page for your website.</p>
 <p><b><strong><em>index.qmd</em></strong></b> - this is the landing page for your site (currently this contains the blog)</p>
-<p><b><strong><em>about.qmd</em></strong></b> this is another page for your website, currently the about section.</p>
-<p>&lt;<b><strong><em>posts</em></strong></b> This is a folder containing some more .qmd files. These are the blogposts.</p>
+<p><b><strong><em>about.qmd</em></strong></b> - this is another page for your website, currently the about section.</p>
+<p><b><strong><em>posts</em></strong></b> - this is a folder containing some more .qmd files. These are the blogposts.</p>
 <p>You can now preview what this looks like. If you have one of the documents open you can type the following in the terminal at the bottom of RStudio (not the console, the terminal!):</p>
 <p><code>quarto publish</code></p>
 <p>You should see something like this:</p>
 <p><img src="default.jpg" class="img-fluid"></p>
-<p>As you can see we have a homepage with some blog articles and an about page and some links at the top right. We can now go and make it look a bit more of a normal website.</p>
+<p>As you can see we have a homepage with some blog articles, and the “About” page and some links at the top right. We can now go and make it look a bit more like a normal website.</p>
 <section id="website-structure" class="level3">
 <h3 class="anchored" data-anchor-id="website-structure">Website Structure</h3>
-<p>The first thing we will do is move the blog to a separate blog page. To do this we open index.qmd, we then save it as blog.qmd (you can also change the title at the top of the file here to blog). We will then delete index.qmd and rename about.qmd to index.qmd. This leaves us with blog.qmd (our original index) and index.qmd (our original about). This has made our About page the homepage, and put the blog on its own separate page.</p>
+<p>The first thing we will do is move the blog to a separate blog page. To do this we open index.qmd, we then save it as blog.qmd (you can also change the title at the top of the file here to Blog). We will then delete the original index.qmd and rename about.qmd to index.qmd. This leaves us with blog.qmd (our original index) and index.qmd (our original about). This has made our original “About” page the homepage, and put the “Blog” on its own separate page.</p>
 <p>We can now sort out the navigation for our site. To do this we open the _quarto.yml. You’ll see the following:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
@@ -257,7 +257,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">editor</span><span class="kw">:</span><span class="at"> visual</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The bit we are interested here is the navbar. This allows us to add and remove elements from the navigation bar at the top of the site. To make our site look a bit cleaner, lets have pages on the left and leave the icons on the right.</p>
 <p><em>Note: you can of course add correct links to the icons, or remove them. You can also add whatever icons/links you want using the icon/href scripts. Quarto uses bootstrap, and a list of the icons you can use is <a href="https://icons.getbootstrap.com/">here</a>.</em></p>
-<p>To move our pages to the left we add the element “left:” to the navbar. We then update the pages, as about.qmd no longer exists. We can also change the title of our site here.</p>
+<p>To move our pages to the left we add the element <code>left:</code> to the navbar. We then update the pages, as about.qmd no longer exists. We can also change the title of our site here.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -309,23 +309,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> github</span></span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Github</span></span>
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>You can see that there is a “template” element. We are going to switch that to trestles (If you are interested you can see the other templates here). This gives us a page that is split, with the image on the left and some text on the right.</p>
-<p>The left hand side of the screen will be populated by stuff that is also in the YAML header. That is, the “image” and the “links” elements you can see above. So replace “profile.jpg” with whatever image you want that is in the project directory, and update the links (or remove them). You can also add a “subtitle” element under “title”. For example, this:</p>
+<p>You can see that there is a “template” element. We are going to switch that to trestles (If you are interested you can see the other templates <a href="https://quarto.org/docs/websites/website-about.html">here</a>). This gives us a page that is split, with the image on the left and some text on the right.</p>
+<p>The left hand side of the screen will be populated by stuff that is also in the YAML header. That is, the <code>image:</code> and the <code>links:</code> elements you can see above. So replace “profile.jpg” with whatever image you want that is in the project directory, and update the links (or remove them). You can also add a “subtitle” element under “title”. For example, this:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"About"</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">image</span><span class="kw">:</span><span class="at"> profile.jpg</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">about</span><span class="kw">:</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">template</span><span class="kw">:</span><span class="at"> jolla</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">links</span><span class="kw">:</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> twitter</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Twitter</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://twitter.com</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> linkedin</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">text</span><span class="kw">:</span><span class="at"> LinkedIn</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://linkedin.com</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> github</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Github</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Howl J. Pendragon"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">subtitle</span><span class="kw">:</span><span class="at"> </span><span class="st">"Wizard &lt;br&gt; The Moving Castle"</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">image</span><span class="kw">:</span><span class="at"> profile.jpg</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">about</span><span class="kw">:</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">template</span><span class="kw">:</span><span class="at"> trestles</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">links</span><span class="kw">:</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> twitter</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Twitter</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://twitter.com</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> linkedin</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">text</span><span class="kw">:</span><span class="at"> LinkedIn</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://linkedin.com</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> github</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Github</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This (along with the changes above) gives us a homepage that looks like this:</p>
 <p><img src="blankhome.jpg" class="img-fluid"></p>
 <p>The icons are the same bootstrap ones mentioned above. It is possible to use extra icons however, by installing third-party extensions such as <a href="https://github.com/schochastics/academicons">Academicons</a>.Of course, using third party apps is at your own risk, and check the authors.</p>
@@ -451,8 +452,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="publications-projects">Publications &amp; Projects</h3>
 <section id="on-the-homeabout-page" class="level4">
 <h4 class="anchored" data-anchor-id="on-the-homeabout-page">On the home/about page</h4>
-<p>So i am going to go over a couple of ways to do these. The first is simple, you can add a section underneath the rest of the info on your homepage.To get this full width we will have to go back and tweak something.</p>
-<p>You need to go and put a wrapper around what we have done so far, so then the two column (picture on left, text on right) structure only applies within that wrapper. Do do this we just need to add <code>:::{#about}</code> at the beginning of our document, right after the YAML, and then <code>:::</code> at the end of what we have done so far. This creates a section called ‘about’, and we then tell the template to apply to this in the YAML, by adding id: about as follows:</p>
+<p>So I am going to go over a couple of ways to do these. The first is simple, you can add a section underneath the rest of the info on your homepage.To get this full width we will have to go back and tweak something.</p>
+<p>You need to go and put a wrapper around what we have done so far, so then the two column (picture on left, text on right) structure only applies within that wrapper. Do do this we just need to add <code>:::{#about}</code> at the beginning of our document, right after the YAML, and then <code>:::</code> at the end of what we have done so far. This creates a section called ‘about’, and we then tell the template to apply to this in the YAML, by adding <code>id: about</code> as follows:</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Howl J. Pendragon."</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">subtitle</span><span class="kw">:</span><span class="at"> </span><span class="st">"Wizard &lt;br&gt; The Moving Castle"</span></span>
@@ -506,7 +507,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Now we have our bibliography added we can go back over to index.qmd. We will add this bit of markdown underneath our new Publications heading:</p>
 <pre><code>::: {#refs}
 :::</code></pre>
-<p>This tells it to automatically add the reference list here. However, typically it will only add references that we have cited (you can cite in text using <code>@</code> in the visual editor or <code>[@]</code> then whatever the tag in the .bib file is, in our example its <code>@bennett2009neural</code>). However, we don’t really want in text citations. So instead we add the following to our YAML .</p>
+<p>This tells it to automatically add the reference list here. However, typically it will only add references that we have cited (you can cite in text using <code>@</code> in the visual editor or <code>[@]</code> in the scource editor, then whatever the tag in the .bib file is, in our example its <code>@bennett2009neural</code>). However, we don’t really want in text citations. So instead we add the following to our YAML .</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> references.bib</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">csl</span><span class="kw">:</span><span class="at"> apa.csl</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>

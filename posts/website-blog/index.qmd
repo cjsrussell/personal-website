@@ -20,25 +20,25 @@ So we will be using Quarto to build our website. Installing it is super easy and
 
 ### Creating a project
 
-To get started we will need to create a blank project. Projects are a nice tidy way to keep related files collected together in their own directory. However, instead of the Quarto Website project template, We will use the Quarto Blog format. This is just a special case of the website, and i'll show you how you can turn off the blog part if you want. To create this project go to:
+To get started we will need to create a blank project. Projects are a nice tidy way to keep related files collected together in their own directory. However, instead of the Quarto Website project template, we will use the Quarto Blog format. This is just a special case of the website, and i'll show you how you can turn off the blog part if you want. To create this project go to:
 
 File -\> New Project... -\> New Diectory -\> Quarto Blog
 
-If you use renv and/or git you can tick those options. Indeed, to host my website I use Git so for me that is necessary, but there are other ways to host the site if you don't want to do it that way.
+If you use renv and/or git you can tick those options. Indeed, to host my website I use Git so for me that is necessary, but there are other ways to host the site if you don't want to do it that way (scroll to the bottom of this blog for a link to how to publish your site).
 
 ![](project.gif)
 
 ## Our website
 
-We now have a website. Job done. Well, almost. You now have a couple of folders and files in your directory. The important ones right now are:
+We now have a website. Job done. Well, almost. You now have a couple of folders and files in your directory we can update. The important ones right now are:
 
 <b>***\_quarto.yml***</b> - this is the main settings and contents page for your website.
 
 <b>***index.qmd***</b> - this is the landing page for your site (currently this contains the blog)
 
-<b>***about.qmd***</b> this is another page for your website, currently the about section.
+<b>***about.qmd***</b> - this is another page for your website, currently the about section.
 
-\<<b>***posts***</b> This is a folder containing some more .qmd files. These are the blogposts.
+<b>***posts***</b> - this is a folder containing some more .qmd files. These are the blogposts.
 
 You can now preview what this looks like. If you have one of the documents open you can type the following in the terminal at the bottom of RStudio (not the console, the terminal!):
 
@@ -48,11 +48,11 @@ You should see something like this:
 
 ![](default.jpg)
 
-As you can see we have a homepage with some blog articles and an about page and some links at the top right. We can now go and make it look a bit more of a normal website.
+As you can see we have a homepage with some blog articles, and the "About" page and some links at the top right. We can now go and make it look a bit more like a normal website.
 
 ### Website Structure
 
-The first thing we will do is move the blog to a separate blog page. To do this we open index.qmd, we then save it as blog.qmd (you can also change the title at the top of the file here to blog). We will then delete index.qmd and rename about.qmd to index.qmd. This leaves us with blog.qmd (our original index) and index.qmd (our original about). This has made our About page the homepage, and put the blog on its own separate page.
+The first thing we will do is move the blog to a separate blog page. To do this we open index.qmd, we then save it as blog.qmd (you can also change the title at the top of the file here to Blog). We will then delete the original index.qmd and rename about.qmd to index.qmd. This leaves us with blog.qmd (our original index) and index.qmd (our original about). This has made our original "About" page the homepage, and put the "Blog" on its own separate page.
 
 We can now sort out the navigation for our site. To do this we open the \_quarto.yml. You'll see the following:
 
@@ -81,7 +81,7 @@ The bit we are interested here is the navbar. This allows us to add and remove e
 
 *Note: you can of course add correct links to the icons, or remove them. You can also add whatever icons/links you want using the icon/href scripts. Quarto uses bootstrap, and a list of the icons you can use is [here](https://icons.getbootstrap.com/).*
 
-To move our pages to the left we add the element "left:" to the navbar. We then update the pages, as about.qmd no longer exists. We can also change the title of our site here.
+To move our pages to the left we add the element `left:` to the navbar. We then update the pages, as about.qmd no longer exists. We can also change the title of our site here.
 
 ``` yaml
 project:
@@ -147,16 +147,17 @@ about:
       href: https://github.com
 ```
 
-You can see that there is a "template" element. We are going to switch that to trestles (If you are interested you can see the other templates here). This gives us a page that is split, with the image on the left and some text on the right.
+You can see that there is a "template" element. We are going to switch that to trestles (If you are interested you can see the other templates [here](https://quarto.org/docs/websites/website-about.html)). This gives us a page that is split, with the image on the left and some text on the right.
 
-The left hand side of the screen will be populated by stuff that is also in the YAML header. That is, the "image" and the "links" elements you can see above. So replace "profile.jpg" with whatever image you want that is in the project directory, and update the links (or remove them). You can also add a "subtitle" element under "title". For example, this:
+The left hand side of the screen will be populated by stuff that is also in the YAML header. That is, the `image:` and the `links:` elements you can see above. So replace "profile.jpg" with whatever image you want that is in the project directory, and update the links (or remove them). You can also add a "subtitle" element under "title". For example, this:
 
 ``` yaml
 
-title: "About"
+title: "Howl J. Pendragon"
+subtitle: "Wizard <br> The Moving Castle"
 image: profile.jpg
 about:
-  template: jolla
+  template: trestles
   links:
     - icon: twitter
       text: Twitter
@@ -339,9 +340,9 @@ So we now have the basis of a homepage, we can work on additional things. First 
 
 #### On the home/about page
 
-So i am going to go over a couple of ways to do these. The first is simple, you can add a section underneath the rest of the info on your homepage.To get this full width we will have to go back and tweak something.
+So I am going to go over a couple of ways to do these. The first is simple, you can add a section underneath the rest of the info on your homepage.To get this full width we will have to go back and tweak something.
 
-You need to go and put a wrapper around what we have done so far, so then the two column (picture on left, text on right) structure only applies within that wrapper. Do do this we just need to add `:::{#about}` at the beginning of our document, right after the YAML, and then `:::` at the end of what we have done so far. This creates a section called 'about', and we then tell the template to apply to this in the YAML, by adding id: about as follows:
+You need to go and put a wrapper around what we have done so far, so then the two column (picture on left, text on right) structure only applies within that wrapper. Do do this we just need to add `:::{#about}` at the beginning of our document, right after the YAML, and then `:::` at the end of what we have done so far. This creates a section called 'about', and we then tell the template to apply to this in the YAML, by adding `id: about` as follows:
 
 ``` yaml
 ---
@@ -410,7 +411,7 @@ Now we have our bibliography added we can go back over to index.qmd. We will add
 :::
 ```
 
-This tells it to automatically add the reference list here. However, typically it will only add references that we have cited (you can cite in text using `@` in the visual editor or `[@]` then whatever the tag in the .bib file is, in our example its `@bennett2009neural`). However, we don't really want in text citations. So instead we add the following to our YAML .
+This tells it to automatically add the reference list here. However, typically it will only add references that we have cited (you can cite in text using `@` in the visual editor or `[@]` in the scource editor, then whatever the tag in the .bib file is, in our example its `@bennett2009neural`). However, we don't really want in text citations. So instead we add the following to our YAML .
 
 ```yaml
 bibliography: references.bib
