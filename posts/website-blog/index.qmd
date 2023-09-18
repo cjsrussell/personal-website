@@ -8,6 +8,7 @@ format:
   html:
     code-fold: true
     code-summary: "Show the code"
+    code-overflow: wrap
 ---
 
 For years a lot of academics have been building websites usinng the Hugo Academic template, including myself. However it is not the simplest to use, and in my opinion the recent changes to how it works made it a bit more effort than it was worth. Given I have been migrating most of my workflow over to Posit's new Quarto ecosystem I wondered if I could create a simple website to achieve a similar feel to Hugo Academic. You can even make it look quite similar with some simple CSS/HTML tweaks. So this is a guide on how to create a simple, clean academic website in Quarto.
@@ -212,15 +213,13 @@ We add this underneath the YAML section (so underneath the ---) in plain text. F
 
 You can then just write your bio in plain text
 
-``` markdown
-
---- 
+```markdown
 ## About Me
 
 Greetings, I am Howl J. Pendragon, a wizard of considerable renown, though the academic establishment may frown upon my unconventional pursuits. Armed with a diploma from the "School of Enchanted Wisdom" (I assure you, it's accredited in magical circles), my scholarly journey involves deciphering cryptic runes, tinkering with potion recipes, and pondering the intricacies of broomstick aerodynamics. My magical treatises, disguised as spellbooks, have enchanted readers across fantastical realms. I've been an esteemed guest speaker at the Witches and Wizards Symposium and received a coveted Cauldron of Excellence award. Alas, the Muggle academic world may remain skeptical, but I shall persist in my mystical endeavors!
 ```
 
-A side tip here. Quarto is markdown based so you can use markdown syntax to do formatting, such as \*\* for *italics*; or "[linkname](link)" to create a hyperlink to a website or a link to a local file (e.g., you could link to your cv with `[click here for my cv](cv.pdf)`, where cv.pdf is in your project directory). You can also do most of this by switching to the visual editor in RStudio if you don't know any markdown (but google is your friend here). Switching to the visual editor is just clicking between the two at the tiop left of your RStuido file window.
+A side tip here. Quarto is markdown based so you can use markdown syntax to do formatting, such as `*text*` for *italics*; or `[linkname](link)` to create a hyperlink to a website or a link to a local file (e.g., you could link to your cv with `[click here for my cv](cv.pdf)`, where cv.pdf is in your project directory). You can also do most of this by switching to the visual editor in RStudio if you don't know any markdown (but google is your friend here). Switching to the visual editor is just clicking between the two at the tiop left of your RStuido file window.
 
 We now have a semi-complete looking website!
 
@@ -255,7 +254,7 @@ We will add the following markdown below our bio text.
 :::
 ```
 
-This splits the section into three columns, one we have added the level 3 heading *Interests* to, one we have left blank to create some space, and the other we have added the heading *Education* too.
+This splits the section into three columns, one we have added the level 3 heading *Interests* to, one we have left blank to create some space, and the other we have added the heading *Education* to.
 
 This leaves you with a script looking something like this:
 
@@ -269,7 +268,7 @@ We install that with:
 quarto add quarto-ext/fontawesome
 ```
 
-We can now add our interests text, along with icons and text for education.
+And can now add our interests text, along with icons and text for education.
 
 ``` markdown
 
@@ -307,7 +306,7 @@ This gives us a pretty solid academic homepage!
 
 ![](homepage2.jpg)
 
-However, you might notice it looks a bit squished. We can make the site wider with the following YAML edit:
+However, you might notice it looks a bit squished/centered. We can make the site wider with the following YAML edit:
 
 ``` yaml
 title: "Howl J. Pendragon."
@@ -341,9 +340,9 @@ So we now have the basis of a homepage, we can work on additional things. First 
 
 #### On the home/about page
 
-So I am going to go over a couple of ways to do these. The first is simple, you can add a section underneath the rest of the info on your homepage.To get this full width we will have to go back and tweak something.
+So I am going to go over a couple of ways to do this. The first is simple, you can add a section underneath the rest of the info on your homepage and put your publications there. However, to get this full width and not just part of the column with our interests and education we will have to go back and tweak something.
 
-You need to go and put a wrapper around what we have done so far, so then the two column (picture on left, text on right) structure only applies within that wrapper. Do do this we just need to add `:::{#about}` at the beginning of our document, right after the YAML, and then `:::` at the end of what we have done so far. This creates a section called 'about', and we then tell the template to apply to this in the YAML, by adding `id: about` as follows:
+You need to go and put a wrapper around what we have done so far, so then the two column (picture on left, text on right) structure only applies within that wrapper. Do do this we just need to add `:::{#about}` at the beginning of our document, right after the YAML, and then `:::` at the end of what we have done so far. This creates a section called 'about' with all the stuff we have done so far, and we then tell the template to apply to this in the YAML, by adding `id: about` as follows:
 
 ``` yaml
 ---
@@ -370,13 +369,13 @@ about:
 ---
 ```
 
-So after we have added a publications heading our index.qmd script now looks something like this:
+So after we have added a publications heading our index.qmd script now looks something like this, where the `:::` to close the section opened by `::: {#about}`comes right before publications.
 
 ![](editor2.jpg)
 
-To do a projects section you just write projects instead! For projects you can then just write about them. But manually writing the publications is tedious, instead you can can automate it with a .bib file. To do this you need to add a .bib file to your project directory. You can export these from your reference manager, or you can get them online for specific papers/dois. Once you have a .bib file you can edit them in RStudio and paste in additional entries from Google Scholar if you wish.
+To create a projects section you just write projects instead of publications. For projects you can then just write about them and use some markdown to make it pretty, add headings or images etc. But manually writing in publications is tedious, instead you can can automate it with a .bib file. To do this you need to add a .bib file to your project directory. You can export these from your reference manager, or you can get them online for specific papers/dois. Once you have a .bib file you can easily edit them ast text files in RStudio and paste in additional entries from Google Scholar if you wish.
 
-Once you have your .bib file saved in your project directory we need to add it like so. You can also add a csl file which specifies the reference formatting. You can get these online too, e.g. [here](https://www.zotero.org/styles?q=APA) from Zotero. Again, just make sure this file is in your project directory.
+Once you have your .bib file saved in your project directory we need to add to our YAML. You can also add a csl file which specifies the reference formatting. You can get these online too, e.g. [here](https://www.zotero.org/styles?q=APA) from Zotero. Again, just make sure this file is in your project directory.
 
 ``` yaml
 ---
@@ -412,7 +411,7 @@ Now we have our bibliography added we can go back over to index.qmd. We will add
 :::
 ```
 
-This tells it to automatically add the reference list here. However, typically it will only add references that we have cited (you can cite in text using `@` in the visual editor or `[@]` in the scource editor, then whatever the tag in the .bib file is, in our example its `@bennett2009neural`). However, we don't really want in text citations. So instead we add the following to our YAML .
+This tells it to automatically create a reference list section here. However, typically it will only add references that we have cited in our page S(you can cite in text using `@` in the visual editor or `[@]` in the scource editor, then whatever the tag in the .bib file is, in our example its `@bennett2009neural`). But we don't really want to use in text citations on our website, so instead we add the following to our YAML to cite the reference without actually citing it.
 
 ```yaml
 bibliography: references.bib
@@ -426,8 +425,7 @@ And there it is:
 
 ![](pubs.jpg)
 
-
-If  you add this and do not add the dedicated #refs section we added above it will automatically create one at the bottom of your page. SO, if you want to remove your publications be sure to remove the nocite: too.
+If  you add this and do not add the dedicated #refs section we added above it will automatically create one at the bottom of your page. **SO**, if you want to remove your publications be sure to remove the `nocite:`, too.
 
 ### As a new page
 You can do exactly what we did but on a new page, too! All you have to do is create a new .qmd file, say pubs.qmd, in the file directory. You then need to add this to your navbar in the _quarto.yml file and you have your pubs page. You then just add bits we just did to that page and voila you have a publications page.
@@ -435,7 +433,7 @@ You can do exactly what we did but on a new page, too! All you have to do is cre
 
 ### Projects as a blog
 
-One final thing before we talk about publishing the website. Earlier we created the site with a blog. Now you can use this as a blog, or you can use it as a projects page. All a "blog" is in this sense is a page with additional pages within it.
+Just one more thing before we talk about publishing the website. Earlier we created the site with a blog. Now you can use this as a blog, or you can use it as a projects page, ro you can have both. All a "blog" is in this sense is a page with additional pages within it.
 
 If we open blog.qmd this is the YAML:
 
@@ -454,7 +452,7 @@ title-block-banner: true
 ---
 ```
 
-This page works by listing all the files within the "posts" folder specified there. This folder contains folders for each blog post, each with a index.qmd file in it which are the blogs written in Quarto Markdown. You could instead of blogs have a page for each of your projects with details and publications, preprints, materials and all sorts of stuff. Or you could do both.
+This page works by listing all the files within the "posts" folder specified there. This folder in your directory contains subfolders for each blog post, each with a index.qmd file in it which are the blogs written in Quarto Markdown. You could instead of blogs have a page for each of your projects with details and publications, preprints, materials and all sorts of stuff. Or you could do both.
 
 Here I will show an example of an extra page for projects. Ive created a new .qmd called projects.qmd, and pasted the YAML from blogs.qmd into it and have just changed the name and the "posts" folder to "projects".
 
@@ -473,7 +471,7 @@ title-block-banner: true
 ---
 ```
 
-I have then added two folders to "projects" called project1 and project2 each with a file called index.qmd.
+This just tells us that this "Projects" page, defined by projects.qmd, will list all the things that are in the "projects" folder. I have added two subfolders to the projects folder called project1 and project2 each with a file called index.qmd in it.
 
 You can now see that we have two "blog" pages (ableit the second looks a bit sparse). You can customise these to your hearts content, and Quarto have some great documentation on how to do this [here](https://quarto.org/docs/websites/website-blog.html).
 
